@@ -1,0 +1,29 @@
+//Résolution équation 2nd degrée
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+       float a,b,c,x,x1,x2;
+       cout<<"Entrez a#0, b et c: "<<endl;
+       cin>>a>>b>>c;
+       while(a==0){
+              cout<<"Reessayez, entrez a#0, b et c: "<<endl;
+              cin>>a>>b>>c;
+              }
+       cout<<"a="<<a<<" b="<<b<<" c="<<c<<endl;
+       float delta = b*b-4*a*c;
+       if(delta<0){
+              cout<<"Delta <0 donc pas de solution";
+              }
+       else{
+              if(delta==0){
+                     x=-b/(2*a);
+                     cout<<"Solution unique: "<<x;
+                     }
+              else{
+                     x1=(-b-sqrt(delta))/(2*a);
+                     x2=(-b+sqrt(delta))/(2*a);
+                     cout<<"Deux solutions: "<<x1<<" et "<<x2;
+                     }
+              }
+       }

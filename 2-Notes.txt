@@ -1,0 +1,149 @@
+			08 h 00 04/07/2024
+
+	1-Notion de base:
+
+TP1:
+Ecrire un  programme qui affiche ceci à l'écran:
+Hello world!
+Bonjour à tous! Bonne journée.
+
+NB:
+rapport ve individuel
+_______collectif : rapport logistique rhtr + sary mention eny ao aloha (dlg)
+
+		------------------------
+
+TP2:
+Ecrire un programme qui permet de calculer d'afficher: la somme, la soustraction, le produit, la division et la division entière (reste) de deux nombres entiers. Les valeurs des deux nombres entiers seront initialisées (selon votre choix).
+
+Même exercice mais les valeurs des deux nombres entiers seront saisient au clavier.
+
+		------------------------
+
+TP3:
+________________qui permet de calculer et d'afficher la moyenne de trois nombres. Les valeurs des trois nombres seront initialisées en debut du programme.
+
+Même exercice mais les valeurs des trois nombres entiers seront saisient au clavier.
+
+		------------------------
+
+TP4:
+________________qui demande à l'utilisateur de saisir 5 entiers  et qui affiche leur moyenne.
+Le programme ne devra utiliser que 3 variables.
+
+		------------------------
+
+TP5:
+________________qui permet de saisir au clavier et d'afficher les valeurs de deux variables A et B de type entier.
+Ensuite, le programme permute et affiche les valeurs des deux variables.
+ex:
+saisir A: 1
+saisir B: 2
+=>A=2	B=1
+
+		-------------------------
+TP6: autre méthode @tp5
+		-------------------------
+
+TP7:
+Ecrire un programme qui affiche la résistance équivalente à trois résistances r1,r2 et r3 (float)
+-Si les résistances sont branchées en série;
+-Si les résistances sont branchées en parallèle
+
+		------------------------
+
+TP8:
+Ecrire un programme qui demande à l'utilisateur de saisir un entier et qui affiche gagner si l'entier est entre 56 et 78 bornes incluses, perdu sinon.
+
+		------------------------
+
+TP9:
+Ecrire un programme qui affiche tous les entiers de 8 jusqu'à 23 (bornes incluses).
+En utilisant un for.
+
+Puis en utilisant while.
+
+		-----------------------
+
+TP10:
+________________qui demande à l'utilisateur de saisir 6 entiers et qui affiche la somme de ces entiers.
+En utilisant un for.
+
+Puis en utilisant while.
+
+
+_______________________________________________
+
+	2.2- Objet:
+
+Une insistance d'une classe est un objet particulier d'une classe qui peut activer les méthodes de la classe et qui a des valeurs particulières des ses attributs.
+Une insistance est un représentant physique d'une classe: c'est OBJET. Tout projet est une instance de classe.
+
+	Champs:
+La liste des champs d'une insistance est celle définie pour la classe.
+La valeur des champs sont particulières à l'instance.
+Les champs d'une instance sont constants.
+
+	Méthodes:
+La liste des méthodes fournies par l'instance est celle de la classe.
+On définit l'objet comme l'instance d'une classe.
+La classe représente pour l'objet ce que représente le type pour la variable.
+
+Un objet est caractérisé par:
+_Son identité(OID)
+Valeur unique et invariante qui caractérise l'objet.
+l'identité doit permettre d'identifier sans ambiguïté l'objet (adresse/ référence ou nom)
+_Son état
+Constitue l'ensemble des valeurs des attributs de cet objet.
+Chaque objet a une valeur par défaut (lorsqu'elle est indiquée à l'instanciation) pour chacune de ses propriétés.
+On appelle ces valeurs, des états de l'objet.
+_Son comportement
+Défini à travers les méthodes applicables à cet objet et qui caractérisent sa façon d'agir et de réagir dans son environnement.
+
+Une classe est un type abstrait qui encapsule les données de traitement.
+C'est une sorte de moule qui permet ensuite de créer auant d'instancequ'on veut.
+Ces instances seront des objets de la classe auxquelles on pourra effectivement envoyer des messages qui activeront les méthodes correspondantes.
+
+Exemple d'objet de la classe Etudiant:
+________________________________
+Objet 1: Etudiant 2	|Objet 2: Etudiant 2	|
+________________|_______________|
+Nom: Aonm	|Nom: Garbi	|
+Prénom: Abdelkarim	|Prénom: Wissen	|
+Age: 20		|Age: 19		|
+________________|_______________|
+	|
+	|_______2 Instances de la classe Etudiant
+
+La figure suivante illustre parfaitement le concept d'objet
+		   _______________
+Identité		{|Ma voiture	|
+		  |______________|
+Etat		{|Blanche		|
+		  |1500 Kg	|
+		  |7800 euros	|
+		  |______________|
+Comportement	{|Démarrer()	|
+		  |Accélérer()	|
+		  |______________|
+
+Un objet est une insistance de classe.
+L'objet, à la différence de la classe qui est abstraite, est concret.
+Chaque objet a des état (Valeurs pour chaque propriété) et des méthodes (les actions de la classe).
+
+Les objets ne sont pas des éléments statiques et leur durées de vie ne correspond pas forcément à la durée d'exécution du programme.
+La durée de vie d'un objet passe par trois étapes:
+1. La déclaration de l'objet et son instanciation
+2. L'utilisation de l'objet en appelant ses méthodes
+3. La suppression de l'objet, en appelant son destructeur ou en arrêtant la machine virtuelle qui exécute le programme, ou en arrêtant simplement le programme.
+
+On instancie un objet en JAVA de la façon suivante:
+	Voiture maVoiture=new Voiture(...);
+
+
+
+
+NB:
+Times new roman/12/inter ligne 1,5/justifié/espacement avant, après:0,0
+	introduction rapport VE:
+Liste visite entreprise/sary(misy légende)/

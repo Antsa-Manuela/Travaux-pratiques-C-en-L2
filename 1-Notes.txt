@@ -1,0 +1,398 @@
+			07 h 48 03/07/2024
+
+Langage c++: langage de programmation
+	_ langage compiler (mila complilateur): c & c++, java...
+	_ Interpreté (web/mila interpréteur ex: navigateur): html(balisable),php, java
+
+NB:
+	fichier.java -(compiler ex:jdk)-> fichier.class -(interpréteur ex:JVM)-> résultat
+
+___________________________________
+
+*Pascal
+	_ C
+	_ C++(tsara ,no C nefa misy tsy vitan'ny C++)= anaovana prgm simple ihany & POO (classe) = hybride
+	_ C#(interface graphique tsara)
+
+
+		--------------------------------------
+			Différences:
+	C					C++
+
+			En tête:
+#include<stdio.h>				#include<iostream>
+#include<math.h>				#include<cmath>
+					using namespacestd;
+
+			Fin:
+return 0; (int main())				pas de return 0;
+			Affichage:
+printf("A"); //A				cout<<"A"; //A
+
+			Lecture:
+scanf("%d",&a);				cin>>a;
+scanf("%i",&b); //ou scanf("%i%i",&b,&c);	cin>>b;
+scanf("%i",&c);---||---			cin>>c;
+					    ou cin>>b>>c;
+
+			Passage à la ligne:
+printf("Hello\n");				cout<<"Hello\n";
+printf("Bonjour");				cout<<"Bonjour";
+/*Hello					/*Hello
+Bonjour*/					Bonjour*/
+		ou
+printf("Hello");				cout<<"Hello"<<endl;
+printf("\n");				cout<<"Bonjour";
+printf("Bonjour");				(\n"="<<endl)
+				ou
+					cout<<"Hello";
+					cout<<endl;
+					ou cout<<"\n";
+
+			Réservation d'une ligne vide:
+			Avant:
+printf("\nHello");				cout<<"\nHello";
+/*					/*
+Hello*/					Hello*/
+		ou
+printf("\n");				cout<<endl;
+printf("Hello");				ou cout<<"\n";
+/*					cout<<"Hello";
+Hello*/					/*
+					Hello*/
+
+			Après:
+printf("Hello/n/n");
+printf("Bonjour");
+/*Hello
+
+Bonjour*/
+		ou
+printf("Hello");				cout<<"Hello/n/n";
+printf("/n/n");				cout<<"Bonjour";
+printf("Bonjour");				/*Hello
+/*Hello					
+					Bonjour*/
+Bonjour*/
+				ou	cout<<"Hello";
+					cout<<"/n/n";
+					ou cout<<endl<<endl;
+					cout<<"Bonjour";
+
+		--------------------------------------
+
+			Equivalences:
+_Déclaration de variable
+_Type de variable
+_Structure de contrôle
+°Structure alternative (conditionnelle)
+	if...else (<0 ou >0)
+	if...elseif...(<0 ou >0		
+			|_1...10:______)	
+			|_11...20:______)
+°Structure répétitive (boucle)
+	while, do...while,for
+_Tableau
+° 1 ou 2 dimensions; l'indice commence à 0 pour C et C++
+
+		--------------------------------------
+	 __Condition d'arrêt ou condition de répétition
+	|
+for(i=0;i<4;i++)
+       |	      |__Incrémentation
+Initialisation
+
+i=0 Instructions
+i=1 ----||----
+i=2 ----||----
+i=3 ----||----
+i=4 \\\\\\\\
+
+		--------------------------------------
+int t[4] //tableau à 4 dimensions:
+ex: 0 1 2 3 
+
+*raha tsy fantatra ny limiten'ny dimension an'ny tableau de (dynamique):
+int t[]
+
+
+int t[4];
+int i;
+	0 2 1 4
+t[0] + t[4] = 0 + 4 = 4
+
+
+
+int t[2][2] //ligne zay vô colonne
+ex:
+1   2
+3   5
+
+t[0][1] = 2
+
+calcul matrice:
+t[0][0] * t[1][1] - t[1][0] * t[0][1] = 1 * 5 - 3 * 2
+
+_____________________________________________________
+
+	1- Exemple de programme en langage C++:
+
+Voici un exemple de programme en langage C++, accompagné d'un exemple d'exécution:
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+	int i;
+	float x;
+	float racx;
+	const int nfois = 3;
+	cout<<"Bonjour\n" ;
+	cout<<"Je vais vous calculer "<<nfois<<" racines carrées\n";
+
+	for(i=0;i<nfois;i++){  //répéter 3 fois
+		cout<<"Donner un nombre: ";
+		cin>>x;
+		if(x<0.0){
+			cout<<"Le nombre "<<x<<" Ne possède pas de racine carrée" ;
+		}
+		else{
+		       racx=sqrt(x);
+			cout<<"Le nombre "<<x<<" a pour racine carrée: "<<racx<<"\n" ;
+		}
+	}
+}
+
+***output:
+
+Bonjour
+Je vais vous calculer 3 racines carrées
+Donnez un nombre: 8
+Le nombre 8 a pour racine carrée: 2.82843
+Donnez un nombre: 4
+Le nombre 4 a pour racine carrée: 2
+Donnez un nombre: 0.25
+Le nombre 0.25 a pour racine carrée: 0.5
+Travail terminé - au revoir
+
+
+____________________________________________
+
+	2- Structure d'un programme en langage C++:
+Nous reviendrons un peu plus loin sur le rôle des première lignes
+La ligne:
+	int main()
+se nomme un "en tête". Elle se précise que ce qui sera décrit à sa suite est en fait le programme principal (main).
+Le programme principal proprement dit vient à la suite de cette en tête.
+Il est délimité par des accolades"{" et "}".
+On dit que les instructions situées entre ces accolades forment un "bloc".
+Notez qu'un bloc peut lui-même contenir d'autres blocs (c'est le cas de notre exemple).
+
+___________________________________________
+
+	3- Déclaration:
+
+Les quatres instructions:
+int i;
+float x;
+float racx;
+const int nfois = 3;
+
+sont des "déclarations".
+La première précise que la variable nommée i est de type int.
+C'est à dire qu'elle est déstinée à contenir des nombres entiers(relatifs).
+Les deux autres déclarations précisent que les variables x et racx sont de types float, c'est à dire qu'elle sont destinées à contenir des nombres flotants.
+Enfin la quatrième déclaration indique que nfois est une constante de type entier, ayant la valeur 3. Contrairement à une variable, la valeur d'une constante ne peut pas être modidifiée.
+
+
+°Variable:
+	variable locale
+	variable global
+
+En C++, comme dans la plupart des langages actuels, les déclarations des types des variables sont obligatoires. Elles doivent apparaître avant d'être effectivement utilisées.
+Ici nous les avons regroupées au début du programme (on devrait plutôt dire: au début de la fonction main).
+Il en ira de même pour toutes les variables définies dans une fonction; on les appelle "variables locales" (en toute rigueur, les variables définies dans notre exemple sont des variables locales de la fonction main).
+
+__________________________________________________
+
+	4- Ecriture des informations: utiliser le flot cout:
+Prenons l'instruction:
+cout<<"Bonjour\n";
+cout est un "flot de sortie" et que << est un opérateur permettant d'envoyer de l'information sur un flot de sortie.
+Admettont que cout désigne la fenêtre dans laquelle s'affichent les résultats.
+Ici, cette instruction peut être intyerprétée ainsi:
+cout reçoit l'information: "Bonjour\n".
+Les guillement servent à délimiter une "chaîne de caractères" (suite de caractères).
+La notation \n est conventionnelle; elle représente un caractère de fin de ligne, c'est à dire lorsqu'il est envoyé à l'écran, provoque le passage à la ligne suivante.
+L'instruction suivante:
+count <<"Je vais vous calculer"<<nfois<<"racine carrée\";
+ressemble à la précédente avec cette différence qu'ici on envoie trois informations différentes à l'écran:
+_l'information "Je vais vous calculer";
+_l'information nfois, c'est à dire la valeur de cette constante (3);
+_l'information "racine carrée\n".
+
+__________________________________________________
+
+	5- Pour faire une répétition: instruction for:
+En C++, il existe plusieurs façons de réaliser une répétition (on dit aussi une "boucle").
+Ici, nous avons utiliser l'instruction for
+	for(i=0;i<nfois;i++)
+Son rôle est de repérer le bloc (délimlité par des accolades "{" et "}")
+_Figurant à sa suite, en respectant les consignes suivantes:
+Avant de commencer cette répétition, réaliser:
+	i=0
+_Avant chaque nouvelle exécution du bloc (tour de boucle), examiner la condition:
+	i cout<nfois
+_Si elle est satisfaite, exécuter le bloc indiqué, sinon passer à l'instruction suivant le bloc, à la fin de chaque exécution du bloc, réaliser:
+	i++
+Il s'agit d'une notation propre au C++ qui est équivalente à:
+	i=i+1
+En définitive, vous voyez qu'ici notre bloc sera repété 3 fois.
+
+__________________________________________________
+
+	6- Lecture des informations: utiliser le flot cin
+La première instruction du bloc répété par l'instruction for affiche tout simplement le message "Donnez un nombre:"
+Prenons l'instruction:
+cin>>x;
+cin est un "flot d'entrée" associée au clavier et que >> est un opérateur permettant d' "extraire" (de lire) de l'information à partir d'un flot d'entrée.
+Admettons que cette instruction peut être interprétée ainsi: ainsi lire une suite de caractères au clavier.
+
+__________________________________________________
+
+	7- Faire des choix: l'instruction if
+Les lignes:
+if(x<0.0)
+cout<<"Le nombre"<<x<<"ne possède pasde racine carrée\n";
+else{
+	racx = sqrt(x);
+	cout<<"Le nombre"<<x<<"a pour racine carrée: "<<racx<<"\n";
+}
+
+constituent une instruction de choix fondée sur la condition x<0.0
+Si cette condition est vraie, on exécute l'instruction suivante,
+c'est à dire:
+cout<<"Le nombre"<<x<<"ne possède pas de racine carrée\n";
+Si elle est fausse, on exécute l'instruction suivant le mot else,
+c'est à dire le bloc:
+{
+	racx = sqrt(x);
+	cout<<"Le nombre"<<x<<"a pour racine carrée: "<<racx<<"\n";
+}
+La fonction sqrt fournit la valeur de la racine carrée d'une valeur flottante qu'on lui transmet en argumant.
+
+NB:	       __argument attribué au fonction
+	      |
+	sqrt(x)
+	  |____fonction
+
+_________________________________________________
+
+Remarque:
+Une instruction telle que:
+racx= sqrt(x);
+est une instruction classique d'affectation, elle donne à la variable racx la valeur de l'expression située à droite du signe égal.
+D'une manière générale, C++ dispose de trois sortes d'instructions:
+_Des instructions simples, terminés obligatoirement par un point virgule;
+_Des instructions de structuration tels que if ou for;
+_Des blocs (délimités par { et }).
+
+Les deux dernières ont une définition "récursive" puisqu'elles peuvent contenir, à leur tour n'importe laquelle des trois formes.
+
+NB:
+	affectation: = (@ affectat° valeur @ variable);
+	égale: == (@ condition ohatra)
+
+_______________________________________________
+
+	8- Directives à destination du préprocesseur:
+Les deux première ligne de notre commande:
+#include <iostream>
+#include <cmath>
+
+Ces directives, contrairement au reste du programme doivent être écrite à raison d'une par ligne et elles doivent obligatoirement commencer en début de ligne.
+Leur emplacement au sein du programmen'est soumis à aucune contraire ( mais une directive ne s'applique qu'à la partie du programme qui lui succède).
+D'une manière générale, il est préférable de les placer au début, avant toute fonction, comme nous l'avons fait.
+Ces deux directives demandent en fait d'introduire (avant compilation) des instruction (en C++) situées dans les fichiers iostream et cmath.
+
+Notez que:
+_iostream contient des déclarations relatives aux flots, en particulier à cin et cout, ainsi qu'aux opérateurs << et >>.
+_cmath contient des déclarations relatives aux fonctions mathématiques (héritées de C), donc en particulier  à sqrt.
+
+D'une manière générale, dès que vous utilisez une fonction dans une partie d'un programme, il est nécéssaire que la directive correspondante ait été préalablement déclarée. Cela vaut également pour les fonctions prédéfinies.
+Notez qu'un même fichier en tête contient des déclarations relatives à plusieur fonctions.
+
+__________________________________________________
+
+	9-Instruction using
+
+La norme de C++ a introduit la nation d' "espaced de noms" (namespace).
+Elle permet de restreindre la "portée" des symboles à une certainepartie du programme.
+Retenez que les symboles déclarés dans le fichier iostream appartiennent à l'espace de noms std.
+
+
+_________________________________________________
+
+	COO
+
+	Constructeur:
+On distingue trois type de constructeurs
+_Constructeur par défaut:
+appelé par défaut lors de la création d'un objet(offert par défaut lors de la compilation s'il n'y a pas de constructeur déclaré).
+_Constructeur par recopie (ou constructeur de copie)
+Possède un unique argument du même type que l'objet à créer (généralement sous forme de référence constante) et il recopie les attributs depuis l'objet passé en argument sur l'objet à créer.
+_Constructeur paramétrique
+Appelé si la signature  correspond à celle du constructeur.
+accesseur (get) et mutateurs (set)
+
+Ces méthodes spéciales permettent d'appeler les propriétés et modifier les propriétés d'une classe depuis l'extérieur, un peu comme une API.
+C'est grâce à elles que l'exterieur peut "appeler" les fonctionnalités de la classe. Les accesseurs permettent de récupérer la valeur des propriétés d'une instance de classe depuis l'extérieur sans y accéder directement.
+Ils sécurisent l'attribut en restreignant sa modification.
+Les mutateurs quand à eux permettent de modifier la valeur que l'on veut donner à l'attribut respecte les contraintes sémantiques qui ont été imposés à la classe.
+
+	Destructeur:
+C'est une méthode qui met fin à la vie d'une instance de classe.
+Il peut être appelé à la suppression de l'objet, explicitement ou implicitement.
+
+
+Pour rendre toutes ces explications sur le concept de classe concrètes, prenons l'exemple précédent de la voiture et implémentons-le dans le langage Java.
+La classe se définit suivant cette syntaxe:
+	public class NomDeLaClasse{...}
+Implémentons complètement la classe Voiture en Java:
+
+public class Voiture{
+	//Déclaration des attributs
+	private String couleur;
+	private double poids;
+	private int prix;
+
+	//Déclaration des méthodes
+	void demarrer(){...}
+	void accelerer(){...}
+
+	//accesseur sur couleur
+	public String getCouleur{
+		return this.couleur;
+	}
+
+	//mutateur su couleur
+	public void setCouleur(String uneCouleur){
+		this.couleur = uneCouleur;
+	}
+}
+________________
+Voiture		|
+________________| Entité
+couleur : string  	| Merise
+poids : double   	|
+prix : int	       	|
+________________|
+démarer()		|	       
+accelere()		| Classe
+________________|
+
+
+_______________________________________________________
+
+L'identifiant d'une méthode est défini par sa signature.
+On appelle signature d'une méthode l'ensemble formé par son nom et la liste des types de ses arguments.
+Deux méthodes peuvent avoir le même nom si elles se distinguent par leurs signatures: c'est la surcharge des méthodes.
