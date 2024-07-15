@@ -22,9 +22,9 @@ int main()
                 for(j=0;j<n;j++){
                         p=t1[i]*t2[i];
                         p2=t1[j]*t2[j];
-        cout<<"le produit "<<i+1<<": "<<p<<endl;
                 }
-        ps=p+p2;
-        cout<<"Resultat: "<<ps<<endl;
+        //cout<<"le produit "<<": "<<p<<" et "<<p2<<endl;
+                        ps=p+p2;
         }
+        cout<<"Resultat: "<<ps<<endl;
 }
