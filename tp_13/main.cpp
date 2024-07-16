@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-       int n, t1[10], t2[10],i,j,p,p2,ps;
+       int n, t1[10], t2[10],i,j,p,p2,ps=0;
        cout<<"Entrez le nombre d'element des vecteurs (maximum 10):"<<endl;
        cin>>n;
        while(n>10){
@@ -19,12 +19,12 @@ int main()
               cin>>t2[j];
               }
         for(i=0;i<n;i++){
-                for(j=0;j<n;j++){
-                        p=t1[i]*t2[i];
-                        p2=t1[j]*t2[j];
-                }
-        //cout<<"le produit "<<": "<<p<<" et "<<p2<<endl;
-                        ps=p+p2;
+                p=t1[i]*t2[i];
         }
+        for(j=0;j<n;j++){
+                p2=t1[j]*t2[j];
+        }
+        //cout<<"le produit "<<": "<<p<<" et "<<p2<<endl;
+        ps=p+p2;
         cout<<"Resultat: "<<ps<<endl;
 }
